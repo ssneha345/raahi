@@ -70,9 +70,9 @@ router.get("/oldage",function(req,res){
     res.render("products/seniorcitizen");
 });
 
-router.get("/recreation",function(req,res){
+router.get("/youth",function(req,res){
     console.log("i am on the start page");
-    res.render("products/recreation");
+    res.render("products/youthtraining");
 });
 
 module.exports = router;
