@@ -1,0 +1,18 @@
+{
+  "name": "raahi",
+  "version": "1.0.0",
+  "description": "Raahi Foundation Trust Official Website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app",
+    "dev": "nodemon app"
+  },
+  "author": "Sneha Sharma",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.9",
+    "express": "^4.18.3",
+    "path": "^0.12.7"
+  }
+}
