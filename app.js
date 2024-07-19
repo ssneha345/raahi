@@ -10,6 +10,7 @@ app.use("/images", express.static('image'));
 app.use("/2024events", express.static('image/events/2024'));
 app.use("/", require("./routes/web"));
 app.use("/api", require("./routes/api"));
+app.use("/year", express.static('year'));
 
 app.listen(app.get("port"), function(){
  console.log("server started on"+ app.get("port"));

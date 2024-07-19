@@ -79,5 +79,9 @@ router.get("/awards",function(req,res){
     console.log("i am on the start page");
     res.render("award/awards");
 });
+router.get("/finances",function(req,res){
+    console.log("i am on the start page");
+    res.render("finance/finances");
+});
 
 module.exports = router;
