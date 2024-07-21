@@ -1,34 +1,165 @@
 <%- include('../partials/_header'); -%>
 
+<script>
+
+document.addEventListener('DOMContentLoaded', function () {
+   const orgChart = document.querySelector('.org-chart');
+const levels = Math.max(...orgData.map(pos => pos.level));
+
+for (let level = 0; level <= levels; level++) {
+    const levelElem = createLevel(level);
+    orgChart.appendChild(levelElem);
+}
+});
+
+const orgData = [
+    {id: 1,title: 'Founder',name: 'ravinder',level: 0},
+    {id: 2, title: 'Founder', name: 'hansraj',level: 0},
+    
+    {id: 3,title: 'IT Partner',name: 'sneha',level: 1,parent: 1},
+    {id: 4, title: 'Legals Partner',name: '',level: 1,parent: 1},
+    {id: 5,title: 'HR partner',name: '',level: 1,parent: 1},
+    
+    {id: 6,title: 'Board Members',name: '',level: 2,parent: 1},
+    {id: 7, title: 'Board Members',name: '',level: 2,parent: 1},
+    {id: 8,title: 'Board Members',name: '',level: 2,parent: 1},
+    {id: 9,title: 'Board Members',name: '',level: 2,parent: 1},
+    
+    {id: 10,title: 'Members',name: '',level: 3,parent: 1},
+    {id: 11, title: 'Members',name: '',level: 3,parent: 1},
+    {id: 12,title: 'Members',name: '',level: 3,parent: 1},
+    {id: 13,title: 'Members',name: '',level: 3,parent: 1},
+    {id: 14, title: 'Members',name: '',level: 3,parent: 1},
+    {id: 15,title: 'Members',name: '',level: 3,parent: 1},
+    
+     {id: 10,title: 'Volunteer',name: '',level: 4,parent: 1},
+    {id: 11, title: 'Volunteer',name: '',level: 4,parent: 1},
+    {id: 12,title: 'Volunteer',name: '',level: 4,parent: 1},
+    {id: 13,title: 'Volunteer',name: '',level: 4,parent: 1},
+    {id: 14, title: 'Volunteer',name: '',level: 4,parent: 1},
+    {id: 15,title: 'Volunteer',name: '',level: 4,parent: 1},
+    
+    // More positions...
+];
+
+function createPosition(position) {
+    const positionElem = document.createElement('div');
+    positionElem.classList.add('position');
+
+    const titleElem = document.createElement('h3');
+    titleElem.textContent = position.title;
+    positionElem.appendChild(titleElem);
+
+    const nameElem = document.createElement('p');
+    nameElem.textContent = position.name;
+    positionElem.appendChild(nameElem);
+    
+     const imageElem = document.createElement('img');
+    imageElem.src = "../../images/"+position.name+".jpeg";
+    positionElem.appendChild(imageElem);
+
+    return positionElem;
+    
+}
+
+function createLevel(level) {
+    const levelElem = document.createElement('div');
+    levelElem.classList.add('level');
+
+    const positions = orgData.filter(pos => pos.level === level);
+    positions.forEach(position => {
+        const positionElem = createPosition(position);
+        levelElem.appendChild(positionElem);
+    });
+
+    return levelElem;
+}
+
+
+
+</script>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.org-chart {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.org-chart .level {
+  	float: left;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.org-chart .position {
+    box-sizing: border-box;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 1rem;
+    margin: 0 1rem;
+    text-align: center;
+}
+
+.org-chart .position h3 {
+    margin: 0;
+    margin-bottom: 0.5rem;
+}
+
+.org-chart .position img{ 
+      width: 18px;
+      height: 14px;
+   }
+.org-chart .position:hover img{
+      transform: scale(6);
+  }
+
+.org-chart .position p {
+    margin: 0;
+}
+</style>
+
+
+    
+  
 <div class="wrapper">
     <h1>Our Team</h1>
-    <div class="team">
-    <div class="team_member">
-        <div class="team_img">
-                <img src="../../images/ravinder.jpeg" alt="">
-        </div>
-        <h3>Ravinder Sahu</h3>
-        <p class="role">Founder</p>
-        <p>detail desctiption here</p>
-     </div>
-     <div class="team_member">
-        <div class="team_img">
-            <img src="../../images/hansraj.jpeg" alt="">
-        </div>
-        <h3>Hansraj Sharma</h3>
-        <p class="role">Founder</p>
-        <p>detail desctiption here</p>
-     </div>
-     <div class="team_member">
-        <div class="team_img">
-            <img src="../../images/sneha.jpg" alt="">
-        </div>
-        <h3>Sneha Sharma</h3>
-        <p class="role">Technical Architect</p>
-        <p>detail desctiption here</p>
-     </div>
+</div>
+    
+<div class="org-chart">
+        <!-- Org chart structure will be added here -->
+</div>
+
+
+ <div class="container" style="background-color:powderblue;">
+        <section class="about">
+            <div class="about-image">
+                <img src="../../images/Membershipform.jpeg" width="300" height="400">
+            </div>
+            <div class="about-content">
+                    <p>
+                     Every Organization Needs funds to work. NGOs are not excluded from this. 
+                    </p>
+                    <p>If you Like our cause ,Please support us by being part of the NGO.</p>
+                    <p>Be a part of Board Member by paying Rs 11000 as annual fees.</p>
+                    <p>Be a part of Member Family by paying Rs 1100 as annual fees.</p>
+                    <p>If you still have some doubt , Be a part of Volunteer Family by paying Rs 0 as annual fees.</p>
+                    <p>You can plan to celebrate special occasion with Extended Raahi family by contributing any amount (Big or Small) .</p>
+            </div>
+        </section>
     </div>
 
-</div>
+
 
 <%- include('../partials/_footer'); -%>
