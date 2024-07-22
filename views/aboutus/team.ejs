@@ -45,16 +45,16 @@ const orgData = [
 function createPosition(position) {
     const positionElem = document.createElement('div');
     positionElem.classList.add('position');
-
-    const titleElem = document.createElement('h3');
-    titleElem.textContent = position.title;
-    positionElem.appendChild(titleElem);
-
-    const nameElem = document.createElement('p');
+    
+    const nameElem = document.createElement('h');
     nameElem.textContent = position.name;
     positionElem.appendChild(nameElem);
+
+    const titleElem = document.createElement('p');
+    titleElem.textContent = position.title;
+    positionElem.appendChild(titleElem);
     
-     const imageElem = document.createElement('img');
+    const imageElem = document.createElement('img');
     imageElem.src = "../../images/"+position.name+".jpeg";
     positionElem.appendChild(imageElem);
 
@@ -81,7 +81,7 @@ function createLevel(level) {
 
 <style>
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Times New Roman', serif;
     line-height: 1.6;
 }
 
@@ -115,6 +115,7 @@ body {
 .org-chart .position h3 {
     margin: 0;
     margin-bottom: 0.5rem;
+    font-style: italic;
 }
 
 .org-chart .position img{ 
