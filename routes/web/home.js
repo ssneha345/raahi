@@ -84,4 +84,9 @@ router.get("/finances",function(req,res){
     res.render("finance/finances");
 });
 
+router.get("/trips",function(req,res){
+    console.log("i am on the start page");
+    res.render("trip/ayodhya");
+});
+
 module.exports = router;
