@@ -15,6 +15,12 @@ router.get("/home",function(req,res){
 router.get("/contactus",function(req,res){
     console.log("i am on the start page");
     res.render("aboutus/contactus");
+
+});
+
+router.get("/Gallery",function(req,res){
+    console.log("i am on the start page");
+    res.render("aboutus/Gallery");
 });
 
 router.get("/team",function(req,res){
