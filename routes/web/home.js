@@ -92,7 +92,7 @@ router.get("/finances",function(req,res){
 
 router.get("/trips",function(req,res){
     console.log("i am on the start page");
-    res.render("trip/ayodhya");
+    res.render("trip/Haridwar");
 });
 
 module.exports = router;
