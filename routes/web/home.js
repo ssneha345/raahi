@@ -90,7 +90,7 @@ router.get("/finances",function(req,res){
     res.render("finance/finances");
 });
 
-router.get("/trips",function(req,res){
+router.get("/Haridwar",function(req,res){
     console.log("i am on the start page");
     res.render("trip/Haridwar");
 });

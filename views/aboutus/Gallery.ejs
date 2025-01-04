@@ -2,34 +2,36 @@
 
 <div class="wrapper">
     <h1>Gallery</h1>
-    <div class="gallery">
-    <div class="gallery-item">
-        <div class="gallery-image">
-            <img src="../../images/gallery/Image_1.jpg"
-                            onclick="openModal('../../images/gallery/Camp.jpg')"
-                            alt="Image 1">
-        </div>
+
+        <div class="events">
+            <div class="team_member">
+            <div class="team_img">
+                    <img src="./../images/gallery/Image_1.jpg" alt="">
+            </div>
+            <div class="team_img1">
+                    <img src="./../images/gallery/Image_2.jpg" alt="">
+            </div>
+            <div class="team_img2">
+                    <img src="./../images/gallery/Image_3.jpg" alt="">
+            </div>
+             <div class="team_img3">
+                    <img src="./../images/gallery/Image_4.jpg" alt="">
+            </div>
+             <div class="team_img4">
+                    <img src="./../images/gallery/Image_5.jpg" alt="">
+            </div>
+             <div class="team_img5">
+                    <img src="./../images/gallery/Image_6.jpg" alt="">
+            </div>
+             <div class="team_img6">
+                    <img src="./../images/gallery/Image_7.jpg" alt="">
+            </div>
+             
+            <div class="about-content">
+                        <p>|</p>
+                        <p>|</p>
+                        <p>|</p>
+                </div>
+         </div>
         
-        
-    </div>
-
-</div>
-
-<div id="myModal" class="modal">
-    <span class="close" onclick="closeModal()">&times;</span>
-    <img class="modal-content" id="modalImage">
-</div>
-
-<!-- JavaScript for Modal -->
-<script>
-    function openModal(src) {
-        document.getElementById("modalImage").src = src;
-        document.getElementById("myModal").style.display = "block";
-    }
-
-    function closeModal() {
-        document.getElementById("myModal").style.display = "none";
-    }
-</script>
-
 <%- include('../partials/_footer'); -%>
