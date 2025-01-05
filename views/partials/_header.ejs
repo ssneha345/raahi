@@ -275,28 +275,34 @@
          .team .team_member .team_img:hover img{
          transform: scale(3);
         }
-        
         .gallery {
-display: grid;
-grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-gap: 10px;
-padding: 20px;
-}
-.wrapper{
-            width: 98%;
-            margin: 0 auto;
-            padding: 10px 20px;
+            display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Creates responsive columns */
+    gap: 10px; /* Space between the items */
+    padding: 20px;
         }
+
+.wrapper {
+    width: 98%;
+    margin: 0 auto;
+    padding: 10px 20px;
+}
+
 .gallery-item {
-overflow: hidden;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .gallery-item img {
-width: 100%;
-height: auto;
-display: block;
+    width: 20%;
+    height: auto;
+    object-fit: cover; /* Ensures the image covers the gallery item without stretching */
+    border-radius: 8px; /* Adds rounded corners to the images */
+    
 }
-
 .modal {
 display: none;
 position: fixed;
